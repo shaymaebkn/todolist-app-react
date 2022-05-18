@@ -28,6 +28,11 @@ const App = () => {
    
   }
 };
+  
+ const handleComplete = (id) => {
+   const compTodo = todos.complet((i) => i.id !== id);
+
+ }
 
  const handleDelete = (id) => {
     const delTodo = todos.filter((to) => to.id !== id);
@@ -38,23 +43,26 @@ const App = () => {
     setTodo(editTodo.todo);
     setEditId(id);
   }
+ 
   return (
     <div className='App'>
         <div className="container">
           <h1>Todo List App </h1>
           <form className='todoform' onSubmit={handleSubmit}>
             <input type="text" value={todo} onChange={(e) => setTodo(e.target.value)}/>
-            <button type='submit'> {editId ? "Edit" : "Add"}ADD</button>
+            <button type='submit'> {editId ? "Edit" : "Add"}</button>
           </form>
           <ul className='alltodos'>
             {
               todos.map((t) => (
 
               <li className='singletodo'>
-              <span className='todotext' key={t.id}> {t.todo}</span>
-              <button onClick={() => handleEdit(t.id)}>Edit</button>
-              <button onClick={() => handleDelete(t.id)}>Delete</button>
-            </li>
+                <span  className='todotext'  key={t.id}> {t.todo}</span>
+                <button onClick={() => handleComplete(t.id)}>done </button>
+                <button onClick={() => handleEdit(t.id)}>Edit</button>
+                <button onClick={() => handleDelete(t.id)}>Delete</button>
+              
+              </li>
 
               ))
             } 

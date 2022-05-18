@@ -3,24 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: rgb(41, 20, 61);
   color: white;
-  background: linear-gradient(to right bottom,#b5e182,#ba25ba);
+ 
 
 
 }
 .container{
   display: flex;
-  height: 80vh;
   border: 1px solid grey;
   padding: 30px;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
   color: white;
-  background: linear-gradient(to right bottom, #ba25ba,#b5e182);
-
-  
+  border-radius: 18px;
+  margin-top: 50px;
+  margin-bottom: 55px;
+  background: linear-gradient(to right bottom,#b5e182,#ba25ba); ;
 
 }
 .todoform{
@@ -41,8 +41,6 @@ button{
   padding: 10px;
   border-radius:20px;
   margin: 0 5px;
-  background-color: #5f5b5b;
-  color: white;
 }
 .alltodos{
   list-style: none;
@@ -53,13 +51,12 @@ button{
 .singletodo{
   border-radius: 50px;
   margin: 10px 0 ;
-  background-color: #e6e8a1;
-  color: black;
-  font-weight: bold;
+  background-color: #b5e182;
   padding: 10px 20px; 
   display: flex;
-  width: 450px;
+  width: 300px;
   align-items: center;
+  
 }
 .todotext{
   flex: 1; 
