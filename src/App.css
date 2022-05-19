@@ -56,6 +56,8 @@ button{
   display: flex;
   width: 300px;
   align-items: center;
+  text-decoration: line-through;
+  opacity: 0.4;
   
 }
 .todotext{

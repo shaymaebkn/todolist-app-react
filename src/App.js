@@ -29,10 +29,7 @@ const App = () => {
   }
 };
   
- const handleComplete = (id) => {
-   const compTodo = todos.complet((i) => i.id !== id);
 
- }
 
  const handleDelete = (id) => {
     const delTodo = todos.filter((to) => to.id !== id);
@@ -56,9 +53,8 @@ const App = () => {
             {
               todos.map((t) => (
 
-              <li className='singletodo'>
+              <li  className='singletodo'>
                 <span  className='todotext'  key={t.id}> {t.todo}</span>
-                <button onClick={() => handleComplete(t.id)}>done </button>
                 <button onClick={() => handleEdit(t.id)}>Edit</button>
                 <button onClick={() => handleDelete(t.id)}>Delete</button>
               
